@@ -1,0 +1,26 @@
+cd output_sample
+	awk '{if($4=="Acura")print$0}' output_sample | head -n 3
+	awk '{if($4=="Audi")print$0}' output_sample | head -n 3
+	awk '{if($4=="Benz")print$0}' output_sample | head -n 3
+	awk '{if($4=="Bmw")print$0}' output_sample | head -n 3
+	awk '{if($4=="Chevy")print$0}' output_sample | head -n 3
+	awk '{if($4=="Chrystler")print$0}' output_sample | head -n 3
+	awk '{if($4=="Civic")print$0}' output_sample | head -n 3
+	awk '{if($4=="Dodge")print$0}' output_sample | head -n 3
+	awk '{if($4=="Ford")print$0}' output_sample | head -n 3
+	awk '{if($4=="Honda")print$0}' output_sample | head -n 3
+	awk '{if($4=="Hyundai")print$0}' output_sample | head -n 3
+	awk '{if($4=="Infiniti")print$0}' output_sample | head -n 3
+	awk '{if($4=="Infinity")print$0}' output_sample | head -n 3
+	awk '{if($4=="Jeep")print$0}' output_sample | head -n 3
+	awk '{if($4=="Lexus")print$0}' output_sample | head -n 3
+	awk '{if($4=="Mazda")print$0}' output_sample | head -n 3
+	awk '{if($4=="Mercedes")print$0}' output_sample | head -n 3
+	awk '{if($4=="Mitsu")print$0}' output_sample | head -n 3
+	awk '{if($4=="Mitsub")print$0}' output_sample | head -n 3
+	awk '{if($4=="Nissan")print$0}' output_sample | head -n 3
+	awk '{if($4=="Scion")print$0}' output_sample | head -n 3
+	awk '{if($4=="Subaru")print$0}' output_sample | head -n 3
+	awk '{if($4=="Toyota")print$0}' output_sample | head -n 3
+	awk '{if($4=="Volkswagen")print$0}' output_sample | head -n 3
+	awk '{if($4=="Volvo")print$0}' output_sample | head -n 3
