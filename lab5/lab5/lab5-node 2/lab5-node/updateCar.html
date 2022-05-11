@@ -1,0 +1,61 @@
+<h1>Update Car</h1>
+<div>
+
+    <label for="year">Year</label>
+    <input type="text" id="year" name="year">
+    <br>
+    
+    <label for="make">Make</label>
+    <input type="text" id="make" name="make">
+    <br>
+    
+    <label for="model">Model</label>
+    <input type="text" id="model" name="model">
+    <br>
+    
+    <label for="rankingTotalScore">rankingTotalScore</label>
+    <input type="text" id="rankingTotalScore" name="rankingTotalScore">
+
+    <input type="submit" id="submit">
+</div>
+
+<script>
+    // get car id form the fist query param
+    const carId = location.search.substr(1).split("&")[0].split('=')[1]
+    let yearInput = document.querySelector('#year')
+    let makeInput = document.querySelector('#make')
+    let modelInput = document.querySelector('#model')
+    let rankingTotalScoreInput = document.querySelector('#rankingTotalScoreInput')
+    function getCar() {
+        fetch(`http://localhost:3000/car/${carId}`)
+            .then(res => res.json())
+            .then(data => {
+                yearInput.value = data.year
+                makeInput.value = data.make
+                modelInput.value = data.model
+                rankingTotalScoreInput.value = data.rankingTotalScoreInput
+            });
+    }
+    getCar()
+
+    const submit = document.querySelector('#submit')
+    document.addEventListener('click', () => {
+        let year = document.querySelector('#year').value
+        let make = document.querySelector('#make').value
+        let model = document.querySelector('#model').value
+        let rankingTotalScore = document.querySelector('#rankingTotalScoreInput').value
+
+        fetch(`http://localhost:3000/car/${carId}`, 
+            {
+                method: 'PUT', 
+                body: `year=${year}&make=${make}&model=${model}&rankingTotalScore=${rankingTotalScore}`,
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded"
+                }
+            }).then(res => {
+                res.json()
+            }).then(data => {
+                console.log(data)
+            })
+    })
+</script>

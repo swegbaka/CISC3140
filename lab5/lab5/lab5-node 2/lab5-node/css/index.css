@@ -1,0 +1,26 @@
+header h1 {
+    text-align: center;
+}
+
+header .search{
+    width: 800px;
+    margin: 0 auto 50px;
+}
+
+main{
+    width: 960px;
+    margin: 0 auto;
+}
+
+table,
+table tr th,
+table tr td {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table {
+    width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
